@@ -5,6 +5,7 @@ import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 
+
 public class HomeTask2 {
 
     public static void main(String[] args) {
@@ -82,7 +83,7 @@ public class HomeTask2 {
 
         System.out.println("TASK #6");
         int i = 70;
-        while (i < 201) {
+        while (i <= 201) {
             System.out.println(i);
             i++;
         }
@@ -135,11 +136,17 @@ public class HomeTask2 {
         } while (checkzero != true);
         System.out.println("Длина числа " + intlength + " символов.");
 
-//        ищем сумму всех цифр, заполняем таблицу для делений на 10, 100, 1000, 10000, 100000 и так далее.
-        int[] myArray = new int[intlength];
-        for (int i82 = 1; i82 <= intlength; i82++) {
-           myArray[i82]=10*i82;
+//        достаем числа в текстовую таблицу.
+         String [] myArray = new String[intlength];
+         String string = String.valueOf(num8);
+        for (int i82 = 1; i82 <=intlength; i82++) {
+           myArray[i82-1]= string.substring(i82-1, i82);
         }
+//        текстовую таблицу переводим в числовую и суммируем
+        for (int i83=1;i83<=intlength;i83++) {
+            amount=amount+Integer.parseInt(myArray[i83-1]);
+        }
+
         System.out.println(amount);
         System.out.println("");
 
